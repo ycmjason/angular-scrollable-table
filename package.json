@@ -1,0 +1,14 @@
+{
+  "name": "scrollable-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "uglify": "uglifyjs -o dist/scrollable-table.min.js scrollable-table.js"
+  },
+  "author": "Jason Yu <me@ycmjason.com> (ycmjason.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^2.7.3"
+  }
+}
