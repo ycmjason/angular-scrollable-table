@@ -6,6 +6,7 @@
     var contents;
     return {
       compile: function(element){
+        var $ = angular.element;
         // save the contents to compile later
         contents = element.contents();
         element.html('');
