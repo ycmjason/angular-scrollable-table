@@ -1,7 +1,7 @@
 (function(angular){
   if(!angular) throw new Error('angular is not defined');
 
-  angular.module('scrollable-table').directive('scrollableTable',
+  angular.module('scrollable-table', []).directive('scrollableTable',
                                      ['$timeout', '$compile', function($timeout, $compile){
     var contents;
     return {

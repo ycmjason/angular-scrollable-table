@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "uglify": "uglifyjs -o dist/scrollable-table.min.js scrollable-table.js"
+    "uglify": "uglifyjs -o dist/scrollable-table.min.js scrollable-table.js",
+    "make": "npm run uglify && cp scrollable-table.js dist/"
   },
   "author": "Jason Yu <me@ycmjason.com> (ycmjason.com)",
   "license": "ISC",
