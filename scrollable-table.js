@@ -1,5 +1,6 @@
-(function(angular){
-  if(!angular) throw new Error('angular is not defined');
+(function(angular, $){
+  if(!angular) throw new Error('Please make sure that Angularjs is included');
+  if(!$) throw new Error('Please make sure that JQuery is included');
 
   angular.module('scrollable-table', []).directive('scrollableTable',
                                      ['$timeout', '$compile', function($timeout, $compile){
@@ -171,4 +172,4 @@
     };
 
   }]);
-})(angular);
+})(angular, $);
