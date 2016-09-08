@@ -23,7 +23,7 @@
           element.append($compile(contents)(scope));
 
           scope.$watch(function(){
-            return container.find('tr, td').length
+            return container.find('tr, td').length;
           }, function(){
             build();
           });
@@ -53,10 +53,10 @@
             ret = fn();
             element.css(stylename, original_value);
             return ret;
-          };
+          }
 
           function getMaxWidthTd(container){
-            table = container.find('table')
+            table = container.find('table');
 
             var widths = tempCSS(table, 'table-layout', 'auto', function(){
               tds = container.find('th, td');
@@ -89,22 +89,22 @@
 
             container.find('tbody')
              .css('display', 'block')
-             .css('height', '30em')
-             .css('overflow-y', 'scroll')
+             .css('height', '10em')
+             .css('overflow-y', 'scroll');
 
             container.find('#scrolling')
              .css('height', '')
              .css('overflow-y', 'hidden');
 
             return container;
-          };
+          }
 
           function fixCol(container){
             var td_width = getMaxWidthTd(container);
 
             container.find('#positioning')
               .css('margin-left', td_width)
-              .css('position', 'relative')
+              .css('position', 'relative');
 
             container.find('td:nth-child(1), th:nth-child(1)')
               .css('position', 'absolute')
@@ -115,7 +115,7 @@
               .css('z-index', '2')
               .css('background-color', 'white');
 
-            fixed_cols = container.find('td:nth-child(1)')
+            fixed_cols = container.find('td:nth-child(1)');
 
             var scrollHandler = function(){
               var height = fixed_cols.outerHeight();
@@ -131,12 +131,12 @@
               container
                 .data('scrollListenerRegistered', true)
                 .find(scrolling_y_selector)
-                .scroll(scrollHandler)
+                .scroll(scrollHandler);
             }
 
             scrollHandler.apply(container.find(scrolling_y_selector));
 
-            return container
+            return container;
           }
 
           function transform(element){
@@ -158,16 +158,17 @@
               .find('#scrolling')
               .css('overflow-y', 'auto')
               .css('overflow-x', 'auto')
-              .css('height', '30em')
+              .css('height', '10em')
               .prepend('<div id="placeholder"></div>');
 
             container
               .find('table')
-              .css('table-layout', 'fixed');
+              .css('table-layout', 'fixed')
+              .css('border-collapse', 'collapse');
 
             return container;
           }
-        }
+        };
       }
     };
 
